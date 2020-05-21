@@ -58,7 +58,7 @@ function fillTransactionList(transactions){
         txt = txt+ '' + Class;
         txt = txt+'"><div class="col-1 bg-dark text-danger hidden" onclick="removeTransaction(';
         txt = txt + '' + transactions[i].id;
-        txt = txt + ');"><h3>X</h3></div><h3 class="col-8 text-inline">';
+        txt = txt + ');"><h4>X</h4></div><h3 class="col-7 text-inline">';
         txt = txt +''+ transactions[i].title;
         txt = txt + '<h3 class="col-3 text-right">';
         txt = txt + ''+ transactions[i].amount;
