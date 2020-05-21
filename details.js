@@ -42,7 +42,7 @@ function fillHeader(){
     txt = txt + '' + personJson.image;
     txt = txt + '" alt="" class="img img-responsive" style="height:15vh; border-radius: 50%;padding :2vh">';
     txt = txt + '' + personJson.name;
-    txt = txt + '</h3><h1 class="text-center">Total Amount : <span id="total"></span></h1>';
+    txt = txt + '</h3><h3 class="text-center">Total Amount : <span id="total"></span></h3>';
     item.innerHTML = txt;
     heading.appendChild(item);
 }
@@ -58,11 +58,11 @@ function fillTransactionList(transactions){
         txt = txt+ '' + Class;
         txt = txt+'"><div class="col-1 bg-dark text-danger hidden" onclick="removeTransaction(';
         txt = txt + '' + transactions[i].id;
-        txt = txt + ');"><h3>X</h3></div><h2 class="col-8 text-inline">';
+        txt = txt + ');"><h3>X</h3></div><h3 class="col-8 text-inline">';
         txt = txt +''+ transactions[i].title;
-        txt = txt + '<h2 class="col-3 text-right">';
+        txt = txt + '<h3 class="col-3 text-right">';
         txt = txt + ''+ transactions[i].amount;
-        txt = txt + '</h2> </h2></div>';
+        txt = txt + '</h3> </h3></div>';
         console.log(txt);
         item.innerHTML = txt;
         list.appendChild(item);
