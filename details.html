@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction Details</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/details.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div id="headingContainer" class="sticky-top bg-dark">
+
+        </div>
+        
+        <hr class="bg-success">
+        <ul class="list-group" id="list">
+            
+        </ul>
+        <a href="#" class="float" data-toggle="modal" data-target="#myModal">
+            <i class="fa fa-plus my-float"></i>
+        </a>
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h4 class="modal-title">Add Transaction</h4>
+                    </div>
+                    <div class="modal-body">
+                    <h4>Description</h4>
+                    <input type="text" id="description" name="Description" class="form-control">
+                    <hr>
+                    <h4>Date</h4>
+                    <input type="date" name="Date" id="date" class="form-control">
+                    <hr>
+                    <h4>Amount</h4>
+                    <input type="number" name="Amount" id="amount" class="form-control">
+                    <h5 class="text-danger">Add negative value for Credit</h5>
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" onclick="addTransaction();" class="btn btn-primary">Add</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal" id="btnClose">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/details.js"></script>
+        <script src="js/jquery-3.5.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </div>
+</body>
+</html>
