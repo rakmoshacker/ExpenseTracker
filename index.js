@@ -1,5 +1,10 @@
 window.onload=function(){
-    //localStorage.setItem("notFirst",'Yes');    
+    var userName =  localStorage.getItem("userName");
+    if(!userName){
+        var startup = document.getElementById("startup");
+        startup.click();
+    }
+    document.getElementById("head").innerText = userName;
    var notFirst =  localStorage.getItem("notFirst");
    console.log(notFirst);
    console.log(completeJson);
@@ -150,4 +155,10 @@ function refresh(){
 
 function fillPersonList(DemoData){
     DemoData.forEach(LoadData);   
+}
+
+function firstTime(){
+    const username = document.getElementById('username').value;
+    localStorage.setItem("userName",username);
+    refresh();   
 }
