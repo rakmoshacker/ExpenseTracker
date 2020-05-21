@@ -108,6 +108,25 @@ function addTransaction(){
 
 function updateStorage(){
     localStorage.setItem("personJson",JSON.stringify(personJson));
+    var index = getindex();
+    updateCompleteStorage(index);
+}
+
+function getindex(){
+    var index = -1;
+    var val = personJson.id;
+    var filteredObj = completeJson.find(function(item, i){
+    if(item.id === val){
+        index = i;
+        return i;
+    }
+    });
+    return index;
+}
+
+function updateCompleteStorage(i){
+    completeJson[i] = personJson;
+    localStorage.setItem("completeJson",JSON.stringify(completeJson));
 }
 
 function refresh(){
