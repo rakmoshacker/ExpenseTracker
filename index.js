@@ -1,8 +1,7 @@
 window.onload=function(){
     var userName =  localStorage.getItem("userName");
     if(!userName){
-        var startup = document.getElementById("startup");
-        startup.click();
+        startupClick();
     }
     document.getElementById("head").innerText = userName;
    var notFirst =  localStorage.getItem("notFirst");
@@ -161,4 +160,9 @@ function firstTime(){
     const username = document.getElementById('username').value;
     localStorage.setItem("userName",username);
     refresh();   
+}
+
+function startupClick(){
+    var startup = document.getElementById("startup");
+    startup.click();
 }
