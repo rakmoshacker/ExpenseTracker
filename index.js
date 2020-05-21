@@ -33,7 +33,7 @@ function LoadData(person){
     txt = txt +''+ person.name;
     txt = txt + '</h4> <img src="';
     txt = txt + ''+ person.image;
-    txt = txt + '" alt="O" style="height: 40vh;" class="card-img">';
+    txt = txt + '" alt="O" style="height: 30vh;" class="card-img">';
     txt = txt + '<h5 class="card-details mt-2 '
     txt = txt + '' + Class;
     txt = txt + '">Balance : <span class="text-center">'
