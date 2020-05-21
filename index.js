@@ -86,7 +86,7 @@ function resizeimg(){
     //document.getElementById("original").appendChild(image);
 
     image.onload = function(e) {
-        canvas.width = 200;
+        canvas.width = 100;
         const sf = canvas.width/image.width;
         canvas.height = image.height*sf;
         ctx.drawImage(image, 
