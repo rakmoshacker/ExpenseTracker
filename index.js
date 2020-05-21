@@ -64,7 +64,9 @@ function previewFile(){
     var reader  = new FileReader();  
 
     reader.onloadend = function () {  
-        preview.src = reader.result;  
+        preview.src = reader.result;
+        console.log(preview.src);
+        resizeimg();
     }  
     console.log(file);
     if (file) {  
@@ -72,6 +74,29 @@ function previewFile(){
     } else {  
         preview.src = "";  
     }  
+}
+
+function resizeimg(){
+    console.log("resize");
+    var canvas = document.createElement("canvas");
+    var ctx = canvas.getContext("2d");
+
+    var image = new Image();
+    image.src = document.querySelector('#preview').src;
+    //document.getElementById("original").appendChild(image);
+
+    image.onload = function(e) {
+        canvas.width = 100;
+        const sf = canvas.width/image.width;
+        canvas.height = image.height*sf;
+        ctx.drawImage(image, 
+            0, 0, image.width, image.height, 
+            0, 0, canvas.width, canvas.height
+        );
+    // create a new base64 encoding
+    document.getElementById("preview").src = canvas.toDataURL();
+    console.log(canvas.toDataURL());
+    };
 }
 
 function updateStorage(){
